@@ -1,3 +1,6 @@
+# (c) 2017, o355 under the GNU GPL 3.0 license.
+# version thereisnoversiontothisprogram
+
 import pygame
 from appJar import gui
 
