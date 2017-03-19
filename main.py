@@ -16,9 +16,9 @@ def musicButtons(btnName):
 
 app = gui()
 pygame.mixer.init()
-app.addButton("15 minutes of Jeopardy think music")
-app.addButton("1 hour of Jeopardy think music")
-app.addButton("1 hour of elevator music")
-app.addButton("Stop Music")
+app.addButton("15 minutes of Jeopardy think music", musicButtons)
+app.addButton("1 hour of Jeopardy think music", musicButtons)
+app.addButton("1 hour of elevator music", musicButtons)
+app.addButton("Stop Music", musicButtons)
 
 app.go()
