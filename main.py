@@ -3,6 +3,7 @@
 
 import pygame
 from appJar import gui
+import sys
 
 def musicButtons(btnName):
     if btnName == "15 minutes of Jeopardy think music":
@@ -16,12 +17,15 @@ def musicButtons(btnName):
         pygame.mixer.music.play()
     elif btnName == "Stop Music":
         pygame.mixer.music.stop()
-
+    elif btnName == "Close":
+        pygame.mixer.music.stop()
+        sys.exit()
 app = gui()
 pygame.mixer.init()
 app.addButton("15 minutes of Jeopardy think music", musicButtons)
 app.addButton("1 hour of Jeopardy think music", musicButtons)
 app.addButton("1 hour of elevator music", musicButtons)
 app.addButton("Stop Music", musicButtons)
+app.addButton("Close", musicButtons)
 
 app.go()
